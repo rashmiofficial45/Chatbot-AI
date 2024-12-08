@@ -1,4 +1,5 @@
-import React , { Children, useState } from "react";
+"use client"
+import React , { useState } from "react";
 
 type InitialValueProps = {
     currentStep : number
@@ -12,7 +13,6 @@ export const InitialValues:InitialValueProps ={
 const authContext = React.createContext(InitialValues)
 
 const {Provider} = authContext
-
 export const AuthContextProvider = ({children}:{
     children:React.ReactNode
 }) => {
